@@ -21,7 +21,7 @@
   <body>
     <div class="amazon-header">
       <div class="amazon-header-left-section">
-        <a href="amazon.html" class="header-link">
+        <a href="index.html" class="header-link">
           <img class="amazon-logo"
             src="images/amazon-logo-white.png">
           <img class="amazon-mobile-logo"
@@ -30,22 +30,22 @@
       </div>
 
       <div class="amazon-header-middle-section">
-        <input class="search-bar" type="text" placeholder="Search">
+        <input class="search-bar" type="text" id="searchInput" placeholder="Search">
 
         <button class="search-button">
-          <img class="search-icon" src="images/icons/search-icon.png">
+          <img onclick="updateShoppingList(searchInput.value)" class="search-icon" src="images/icons/search-icon.png">
         </button>
       </div>
 
-      <div class="amazon-header-right-section">
-        <a class="orders-link header-link" href="orders.html">
+      <div class="amazon-header-right-section js-cart-images">
+        <a class="orders-link header-link" href="#">
           <span class="returns-text">Returns</span>
           <span class="orders-text">& Orders</span>
         </a>
 
-        <a class="cart-link header-link" href="checkout.html">
+        <a class="cart-link header-link" href="#">
           <img class="cart-icon" src="images/icons/cart-icon.png">
-          <div class="cart-quantity">3</div>
+          <div class="cart-quantity js-cart-quantity">0</div>
           <div class="cart-text">Cart</div>
         </a>
       </div>
@@ -55,7 +55,9 @@
       <div class="products-grid js-products-grid">
       </div>
     </div>
-
+    
+    <script src="data/cart.js"></script>
+    <script src="data/products.js"></script>
     <script src="scri/shopping.js"></script>
   </body>
 </html>
